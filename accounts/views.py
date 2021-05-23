@@ -105,9 +105,10 @@ def login(request):
             auth.login(request, user)
             messages.success(request, 'You are now logged in.')
             url = request.META.get('HTTP_REFERER')
-            string = str(url).split('?')[1][0:4]
-            if string == "next":
-                return redirect('checkout')
+            string = str(url).split('?')
+            if len(string)==2:
+                if string[1][0:4] == "next":
+                    return redirect('checkout')
             else:
                 return redirect('dashboard')
         else:
