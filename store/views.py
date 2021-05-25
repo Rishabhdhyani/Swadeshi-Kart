@@ -10,6 +10,7 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .forms import ReviewForm
 from django.contrib import messages
+from store.models import ProductGallery
 # Create your views here.
 
 def store(request,category_slug=None):
@@ -52,6 +53,7 @@ def product_detail(request,category_slug=None,product_slug=None):
     else:
         orderproduct = None
 
+    product_gallery = ProductGallery.objects.filter(product=single_product)
     # Get the reviews
     reviews = ReviewRating.objects.filter(product_id=single_product.id, status=True)
 
@@ -60,7 +62,7 @@ def product_detail(request,category_slug=None,product_slug=None):
         'in_cart'       : in_cart,
         'orderproduct': orderproduct,
         'reviews': reviews,
-
+        'product_gallery': product_gallery,
     }
 
     return render(request,'store/product_detail.html',context)
