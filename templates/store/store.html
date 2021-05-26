@@ -145,11 +145,9 @@
 						<del class="price-old">$ {{ product.price|add:"1000" }}</del>
 					</div> <!-- price-wrap.// -->
 				</div>
-				{% if product.stock > 0 %}
-					<a href="{% url 'add_cart' product.id %}" class="btn btn-block btn-primary">Add to cart</a>
-				{% else %}
+
 					<a href="{{ product.get_url }}" class="btn btn-block btn-primary">View Details</a>
-				{% endif %}
+				
 			</figcaption>
 		</figure>
 	</div> <!-- col.// -->

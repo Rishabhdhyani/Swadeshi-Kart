@@ -74,8 +74,8 @@
 	</td>
 	<td>
 		<div class="price-wrap">
-			<var class="price">₹ {{ cart_item.product.price|mul:cart_item.quantity }}</var>
-			<small class="text-muted"> ₹{{ cart_item.product.price }} each </small>
+			<var class="price">$ {{ cart_item.product.price|mul:cart_item.quantity }}</var>
+			<small class="text-muted"> ${{ cart_item.product.price }} each </small>
 		</div> <!-- price-wrap .// -->
 	</td>
 
@@ -96,15 +96,15 @@
 		<div class="card-body">
 			<dl class="dlist-align">
 			  <dt>Total price:</dt>
-			  <dd class="text-right">₹{{ total|floatformat:"2" }}</dd>
+			  <dd class="text-right">${{ total|floatformat:"2" }}</dd>
 			</dl>
 			<dl class="dlist-align">
 			  <dt>GST:</dt>
-			  <dd class="text-right"> ₹{{ gst }}</dd>
+			  <dd class="text-right"> ${{ gst }}</dd>
 			</dl>
 			<dl class="dlist-align">
 			  <dt>Total:</dt>
-			  <dd class="text-right text-dark b"><strong>₹{{ grand_total }}</strong></dd>
+			  <dd class="text-right text-dark b"><strong>${{ grand_total }}</strong></dd>
 			</dl>
 			<hr>
 			<p class="text-center mb-3">
