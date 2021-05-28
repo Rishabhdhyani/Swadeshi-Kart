@@ -27,9 +27,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['django-env-Skart.eba-vipew8gv.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['django-env-Skart.eba-vipew8gv.us-west-2.elasticbeanstalk.com','*']
 
 
 # Application definition
@@ -164,8 +164,8 @@ MESSAGE_TAGS = {
 }
 
 # SMTP configuration
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
