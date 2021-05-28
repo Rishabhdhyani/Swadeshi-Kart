@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-env.eba-7syjjm7m.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
