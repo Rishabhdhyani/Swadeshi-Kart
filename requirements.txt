@@ -10,6 +10,7 @@ django-heroku==0.0.0
 django-mathfilters==1.0.0
 django-rotate-secret-key==0.3
 django-session-timeout==0.1.0
+gunicorn==20.1.0
 idna==2.10
 joblib==1.0.1
 numpy==1.20.3

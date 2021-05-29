@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT swadeshikart.wsgi:application
+web: gunicorn swadeshikart.wsgi
