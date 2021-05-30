@@ -9,7 +9,7 @@ An E-commerce website built using the Django web framework. It provides various 
 * PostgreSQL(Production)
 * scipy
 * scikit-surprise
-* Heroku
+* [Heroku](https://swadeshikart.herokuapp.com/)
 * Numpy
 * Pandas
 
